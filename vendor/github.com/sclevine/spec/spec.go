@@ -121,7 +121,7 @@ func (s Suite) Focus(text string, f func(*testing.T, G, S), opts ...Option) bool
 // Run executes the specs defined in each top-level group of the suite.
 func (s Suite) Run(t *testing.T) bool {
 	t.Helper()
-	return s("", nil, func(c *config) { c.t = t })
+	return s("", nil)
 }
 
 // New creates an empty suite and returns an Suite function.
